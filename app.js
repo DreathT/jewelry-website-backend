@@ -1,8 +1,12 @@
 import express from "express";
 import cors from "cors";
 import globalConfig from "./configs/globalConfig.js";
+import { connectDatabase } from "./configs/dbConfig.js";
 
 const app = express();
+
+// Connect to Database
+connectDatabase()
 
 // Use Libraries
 app.use(cors())
