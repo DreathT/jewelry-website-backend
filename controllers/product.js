@@ -10,7 +10,7 @@ const getAllProducts = async (req, res) => {
             const price = ((product.popularityScore + 1) * product.weight * goldPrice).toFixed(2);
             return {
                 ...product,
-                price: `${price} USD`,
+                price: price,
                 popularityScoreDisplay: (product.popularityScore * 5).toFixed(1),
             };
         });
